@@ -1,0 +1,15 @@
+node_modules
+.idea
+
+
+#-----for production-------------#
+#*.ts
+#!*.d.ts
+#*.md
+#tsconfig.json
+
+
+#---------for developent --------#
+**/*.d.ts
+**/*.map
+**/*.js

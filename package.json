@@ -1,0 +1,26 @@
+{
+  "name": "infobip",
+  "version": "0.0.1",
+  "description": "Infobip Node Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "messaging",
+    "sms",
+    "voice",
+    "client",
+    "saas"
+  ],
+  "author": "Oreofe Olurin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/core-js": "0.9.35",
+    "@types/node": "7.0.5",
+    "@types/request": "0.0.39"
+  },
+  "dependencies": {
+    "request": "2.79.0"
+  }
+}
