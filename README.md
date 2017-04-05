@@ -21,11 +21,11 @@ var infobip = require('infobip');
 //Initialize the client
 var client = new infopib.Infobip('username', 'password');
 
-//Set the SMS option
-var smsOption = {from: "InfoSMS", to : "41793026727", text : "My first Infobip SMS"};
+//Set the message
+var message = {from: "InfoSMS", to : "41793026727", text : "My first Infobip SMS"};
 
 //Send an SMS
-this.client.SMS.send(smsOption,function(err, response){
+client.SMS.send(message,function(err, response){
    console.log(response);
 });
 
@@ -37,7 +37,7 @@ Promise are supported
 
 ```javascript
 
-this.client.SMS.send(smsOption).then(res => console.log(res)).catch( err=> console.log(err));
+client.SMS.send(message).then(res => console.log(res)).catch( err=> console.log(err));
 
 ```
 
