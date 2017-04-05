@@ -12,9 +12,8 @@ $ npm install --save infobip
 
 ## Usage
 
-Busform provides you with a form `data` object containing the values of the fields in the multipart form.
-
-Examples:
+Basic messaging example
+-----------------------
 
 ```javascript
 var infobip = require('infobip');
@@ -22,7 +21,7 @@ var infobip = require('infobip');
 //Initialize the client
 var client = new infopib.Infobip('username', 'password');
 
-//Set SMS option
+//Set the SMS option
 var smsOption = {from: "InfoSMS", to : "41793026727", text : "My first Infobip SMS"};
 
 //Send an SMS
@@ -30,8 +29,14 @@ this.client.SMS.send(smsOption,function(err, response){
    console.log(response);
 });
 
+```
 
-//Promise are supported
+
+Promise are supported
+-----------------------
+
+```javascript
+
 this.client.SMS.send(smsOption).then(res => console.log(res)).catch( err=> console.log(err));
 
 ```
