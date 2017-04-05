@@ -20,15 +20,19 @@ Examples:
 var infobip = require('infobip');
 
 //Initialize the client
-var client = new infopib.Infobip( process.env.INFOBIP_USERNAME, process.env.INFOBIP_PASSWORD);
+var client = new infopib.Infobip('username', 'password');
 
 //Send an SMS
-this.client.SMS.send({from: "InfoSMS", to : "41793026727", text : "My first Infobip SMS"},function(err, response){
-        if(err) console.log(err);
+this.client.SMS.send({
+    from: "InfoSMS", 
+    to : "41793026727", 
+    text : "My first Infobip SMS"
+},function(err, response){
+
+    if(err) console.log(err);
         
-        console.log(response);
-        
-    });
+    console.log(response);
+});
 ```
 
 
