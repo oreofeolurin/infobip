@@ -1,6 +1,6 @@
 {
   "name": "infobip",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Infobip Node Client",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,10 @@
   ],
   "author": "Oreofe Olurin",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oreofeolurin/infobip.git"
+  },
   "devDependencies": {
     "@types/core-js": "0.9.35",
     "@types/node": "7.0.5",
