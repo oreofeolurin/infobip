@@ -7,6 +7,8 @@ export interface SMSOptions{
     text: string
 }
 
+export interface BulkSMSOptions extends Array<SMSOptions>{}
+
 export class SMS{
 
     private transport: Transport;
@@ -47,4 +49,33 @@ export class SMS{
         })
     }
 
+    /**
+     * Send HTTP POST Request to Infobip
+     * to send bulk sms
+     *
+     * @param options
+     */
+    public sendBulk(options: BulkSMSOptions) {
+
+        return new Promise((resolve, reject)=> {
+
+            //path for this request
+            let path = '/sms/1/text/multi';
+
+            let body = {
+                "messages": options
+            };
+
+            this.transport.send({"path": path, "body": body}, function (err, res, resBody) {
+                if (err)
+                    return reject(err);
+
+                if(res.statusCode == 200)
+                    return resolve(resBody);
+                else
+                    return reject(resBody);
+
+            });
+        })
+    }
 }
