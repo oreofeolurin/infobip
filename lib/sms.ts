@@ -26,7 +26,7 @@ export class SMS{
         return new Promise((resolve, reject)=> {
 
             //path for this request
-            let path = Array.isArray(options.to) ? '/sms/1/text/multi' : '/sms/1/text/single';
+            let path = Array.isArray(options.to) ? '/sms/2/text/single' : '/sms/1/text/single';
 
             let body = {
                 "to": options.to,
