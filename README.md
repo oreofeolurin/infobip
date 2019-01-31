@@ -31,6 +31,37 @@ client.SMS.send(message,function(err, response){
 
 ```
 
+SMS to multiple destinations
+-----------------------
+
+```javascript
+//Set the message
+var message = [{from: "WineShop", to : ["41793026727", "41793026834"], text : "Hey Mike, delicious Istrian Malvazija is finally here. Feel free to visit us and try it for free!"}];
+
+//Send an SMS
+client.SMS.send(message,function(err, response){
+   console.log(response);
+});
+
+```
+
+Bulk messaging example
+-----------------------
+
+```javascript
+//Set the message
+var messages = [
+    {from: "WineShop", to : "41793026727", text : "Hi Jenny, we have new French Merlot on our shelves. Drop by our store for a free degustation!"},
+    {from: "WineShop", to : "41793026834", text : "Hey Mike, delicious Istrian Malvazija is finally here. Feel free to visit us and try it for free!"}
+    ];
+
+//Send an SMS
+client.SMS.sendBulk(messages,function(err, response){
+   console.log(response);
+});
+
+```
+
 
 Promise are supported
 -----------------------
